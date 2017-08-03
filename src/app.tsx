@@ -1,10 +1,15 @@
 import * as React from 'react';
 
+const electron = require('electron');
+const remote = electron.remote;
+const mainProcess = remote.require('./main');
+
 export default class App extends React.Component {
   render() {
     return (<div>
-      Hello World!
-      <a href="https://willowtreeapps.com/careers">Come work with me.</a>
+      <button onClick={() => mainProcess.selectResultsDirectory((dir: string) => {
+        console.log('dir', dir);
+        })} type="button">Save The File</button>
     </div>);
   }
 }
