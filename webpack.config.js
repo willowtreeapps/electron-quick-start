@@ -11,11 +11,16 @@ const config = {
     `webpack-hot-middleware/client?path=http://localhost:${port}/__webpack_hmr`,
   ],
   target: 'electron-renderer',
+  devtool: "source-map",
   output: {
     filename: 'renderer.bundle.js',
     path: __dirname + '/bundle',
     publicPath: `http://localhost:${port}/bundle/`,
     libraryTarget: 'commonjs2'
+  },
+  resolve: {
+    // Add '.ts' and '.tsx' as resolvable extensions.
+    extensions: [".ts", ".tsx", ".js", ".json"]
   },
   module: {
     loaders: [
@@ -34,6 +39,12 @@ const config = {
       {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.tsx?$/, loader: "awesome-typescript-loader"
+      },
+      {
+        enforce: "pre", test: /\.js$/, loader: "source-map-loader"
       }
     ]
   },
