@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "willowtree-pitch",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A markdown editor for slide decks",
   "main": "main.js",
   "scripts": {
     "start": "NODE_ENV=DEV concurrently \"babel-node server.js\" \"sleep 2 && electron .\"",
@@ -9,16 +9,13 @@
     "watch": "NODE_ENV=DEV babel-node server.js",
     "start:prod": "webpack && electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/willowtreeapps/pitch",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Markdown",
+    "SlideDeck"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "WillowTree Inc.",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
