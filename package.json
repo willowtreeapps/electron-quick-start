@@ -39,6 +39,7 @@
     "webpack-hot-middleware": "^2.18.2"
   },
   "dependencies": {
+    "marked": "^0.3.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-md-editor": "^0.2.2"

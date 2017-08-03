@@ -1,9 +1,10 @@
 import React from 'react';
+import Editor from './editor';
 
 export default class App extends React.Component {
   render() {
     return (<div>
-      Hello World!
+      <Editor/>
       <a href="https://willowtreeapps.com/careers">Come work with me.</a>
     </div>);
   }
